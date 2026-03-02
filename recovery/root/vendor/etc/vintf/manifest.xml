@@ -1,5 +1,7 @@
 <!--
     Input:
+        manifest_chipone.xml
+        manifest.xml
         vendor.transsion.hardware.hyperion.hap_device.xml
         manifest_tranlog.xml
         manifest_tranlogconfig.xml
@@ -18,6 +20,7 @@
         manifest_aee.xml
         manifest_boot.xml
         manifest_netdagent.xml
+        manifest_tetheroffloadservice.xml
         manifest_pq.xml
         manifest_mmservice.xml
         manifest_mmagent.xml
@@ -233,6 +236,26 @@
         <fqname>@2.0::ISensors/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.tetheroffload.config</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOffloadConfig/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.tetheroffload.control</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IOffloadControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::IOffloadControl/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.thermal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -243,6 +266,26 @@
         </interface>
         <fqname>@1.0::IThermal/default</fqname>
         <fqname>@2.0::IThermal/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.focaltech.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFocalFingerprintService</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFocalFingerprintService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.fpsensor.hardware.fpsensorhidlsvc</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IFpsensorHidlSvc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IFpsensorHidlSvc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.aee</name>
